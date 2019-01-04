@@ -1,0 +1,40 @@
+[package]
+name = "qrcode-wasm"
+version = "0.1.0"
+authors = ["Denis Kolodin <deniskolodin@gmail.com>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+base64 = "0.10"
+console_error_panic_hook = "0.1"
+futures = "0.1"
+image = "0.20"
+qrende = { path = "../qrende" }
+ruukh = "0.0.3"
+wasm-bindgen = "0.2"
+wasm-bindgen-futures = "0.3"
+
+[dependencies.web-sys]
+version = "0.3.6"
+features = [
+  "Window",
+  "console",
+  "Document",
+  "Element",
+  "HtmlElement",
+  "HtmlCanvasElement",
+  "CanvasRenderingContext2d",
+  "HtmlVideoElement",
+  "HtmlMediaElement",
+  "Navigator",
+  "MediaDevices",
+  "MediaStreamConstraints",
+  "MediaStream",
+  "MediaStreamTrack"
+]
+
+[replace]
+"web-sys:0.3.6" = { git = "https://github.com/selaux/wasm-bindgen.git", rev = "integration" }
