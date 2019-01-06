@@ -12,7 +12,7 @@ base64 = "0.10"
 console_error_panic_hook = "0.1"
 futures = "0.1"
 image = "0.20"
-qrende = { path = "../qrende" }
+qrende = { git = "https://github.com/selaux/qrende.git" }
 ruukh = "0.0.3"
 wasm-bindgen = "0.2"
 wasm-bindgen-futures = "0.3"
